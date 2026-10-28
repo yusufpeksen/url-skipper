@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Kısa Link Atlayıcı",
+  "version": "0.2.0",
+  "description": "Kısa link sayfalarında açıkça sunulan hedef adrese otomatik gider.",
+  "permissions": ["webRequest"],
+  "host_permissions": ["*://snip.ly/*", "*://*.snip.ly/*"],
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.linkvertise.com/*",
+        "*://linkvertise.com/*",
+        "*://*.ouo.io/*",
+        "*://ouo.io/*",
+        "*://*.ouo.press/*",
+        "*://ouo.press/*",
+        "*://*.shrinkme.io/*",
+        "*://shrinkme.io/*",
+        "*://*.adfoc.us/*",
+        "*://adfoc.us/*",
+        "*://*.exe.io/*",
+        "*://exe.io/*",
+        "*://*.cuty.io/*",
+        "*://cuty.io/*",
+        "*://tinyurl.com/*"
+      ],
+      "js": ["resolver.js", "content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+# Temporary browser profiles from live checks
+.chrome-live-test*/
+.edge-live-test/
+.edge-extension-test/
+
+node_modules/
+*.log

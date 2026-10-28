@@ -1,0 +1,13 @@
+{
+  "name": "url-skipper",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Chrome extension for skipping exposed short-link destinations",
+  "scripts": {
+    "test": "node --test",
+    "check": "node --check background.js && node --check content.js && node --check headers.js && node --check resolver.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
